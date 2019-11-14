@@ -41,7 +41,12 @@ h1 {
     font-size: 22px;
 }
 
-h1::after {
+section > h2 {
+    font-family: "Montserrat Bold";
+    font-size: 14px;
+}
+
+h1::after, section > h2::after {
     content: "";
     display: block;
     border-bottom: 4px solid black;
@@ -55,7 +60,7 @@ p {
     font-size: 11px;
     font-weight: 600;
     word-spacing: 1px;
-    line-height: 15px;
+    line-height: 18px;
     color: rgb(152, 152, 152);
 }
 
@@ -167,14 +172,14 @@ header {
     padding: 20px 0;
 }
 
-.company-video {
+.icon-link-block {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.company-video img {
+.icon-link-block img {
     margin-bottom: 10px;
 }
 
@@ -202,3 +207,120 @@ header {
     }
 
 }
+
+.text-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* form starting stylings ------------------------------- */
+.group 			  { 
+    position: relative;
+  }
+  input 				{
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width: 350px;
+    border:none;
+    border-bottom:1px solid white;
+  }
+  input:focus 		{ outline:none; }
+  
+  /* LABEL ======================================= */
+  label {
+    font-family: "Montserrat Regular";
+    color: white; 
+    font-size: 14px;
+    font-weight: bolder;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all; 
+    -moz-transition: 0.2s ease all; 
+    -webkit-transition: 0.2s ease all;
+  }
+  
+  /* active state */
+  input:focus ~ label, input:valid ~ label 		{
+    top:-20px;
+    font-size:14px;
+    color:#5264AE;
+  }
+  
+  /* BOTTOM BARS ================================= */
+.bar {
+    position: relative;
+    display: block;
+    width: 365px;
+}
+  .bar:before, .bar:after 	{
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:1px; 
+    position:absolute;
+    background:#5264AE; 
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  .bar:before {
+    left:50%;
+  }
+  .bar:after {
+    right:50%; 
+  }
+  
+  /* active state */
+  input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width:50%;
+  }
+  
+  /* HIGHLIGHTER ================================== */
+  .highlight {
+    position:absolute;
+    height:60%; 
+    width:100px; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+  }
+
+  /* Search icon */
+
+  .group a {
+      position: absolute;
+      top: 15px;
+      left: 345px;
+  }
+  
+  .group a i {
+    color: white;
+  }
+  
+  
+  /* active state */
+  input:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+  }
+  
+  /* ANIMATIONS ================ */
+  @-webkit-keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+  @-moz-keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+  @keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
