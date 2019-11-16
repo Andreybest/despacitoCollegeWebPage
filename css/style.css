@@ -9,11 +9,15 @@
 }
 
 .container-fluid {
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
+    background-color: rgb(245, 245, 245);
+    z-index: 0;
 }
 
 .container {
@@ -23,7 +27,7 @@
     align-items: center;
     flex-direction: column;
     margin: 0 auto;
-    background-color: yellow;
+    z-index: 0;
 }
 
 @font-face {
@@ -83,8 +87,12 @@ span h2, span sup {
     letter-spacing: 3px;
 }
 
+a {
+    text-decoration: none;
+}
+
 header {
-    background-color: rgba(0, 0, 0, 0.493);
+    /* background-color: rgba(0, 0, 0, 0.493); */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -103,8 +111,8 @@ header {
     margin-left: 18px;
 }
 
-.white-icon {
-    color: #ffffff;
+.social-media a {
+    color: black;
 }
 
 .row {
@@ -144,8 +152,20 @@ header {
     background-color: white;
 }
 
+.background-black {
+    background-color: rgb(40, 40, 40);
+}
+
 .background-yellow p {
     color: black;
+}
+
+.background-blue h1 {
+    color: white;
+}
+
+.background-blue h1:after {
+    border-bottom: 4px solid white;
 }
 
 .button {
@@ -175,6 +195,10 @@ header {
 .controller span {
     display: flex;
     padding: 20px 0;
+}
+
+.controller img {
+    cursor: pointer;
 }
 
 .icon-link-block {
@@ -228,7 +252,7 @@ header {
 }
 
 .review > img {
-    width: 45px;
+    width: 60px;
 }
 
 .review h3 {
@@ -268,7 +292,6 @@ footer {
     width: 100%;
     justify-content: center;
     align-items: center;
-    background-color: rgb(245, 245, 245);
 }
 
 /* form starting stylings ------------------------------- */
@@ -380,3 +403,40 @@ footer {
       from { background:#5264AE; }
     to 	{ width:0; background:transparent; }
   }
+
+
+
+.slider-1 {
+    display: flex;
+    align-items: stretch;
+    height: 654px;
+}
+
+.slider-1 img {
+    height: auto;
+    display: flex;
+}
+
+.slider-1-wrap {
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+    overflow: hidden;
+    margin-left: 300px;
+}
+
+.slider {
+    padding: 0;
+}
+
+.slider-2 img {
+    height: -moz-available;
+    height: -webkit-fill-available;
+    display: flex;
+}
+
+.slider-2-wrap {
+    height: 232px;
+    width: 232px;
+    overflow: hidden;
+}
