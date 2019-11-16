@@ -100,9 +100,6 @@ header {
     padding: 10px 0;
 }
 
-.logo {
-}
-
 .social-media {
     justify-content: space-around;
 }
@@ -217,26 +214,6 @@ header {
     font-size: 10px;
 }
 
-@media (max-width: 1024px) {
-
-    .container {
-        width: 100%;
-    }
-
-    header {
-        padding: 10px 20px;
-    }
-
-    .box-2-1 {
-        flex: 1 0 100%;
-    }
-
-    .box-1-1 {
-        flex: 1 0 50%;
-    }
-
-}
-
 .text-field {
     display: flex;
     justify-content: center;
@@ -292,6 +269,123 @@ footer {
     width: 100%;
     justify-content: center;
     align-items: center;
+}
+
+
+.slider-1 {
+    display: flex;
+    align-items: stretch;
+    height: 654px;
+}
+
+.slider-1 img {
+    height: auto;
+    display: flex;
+}
+
+.slider-1-wrap {
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+    overflow: hidden;
+    margin-left: 300px;
+}
+
+.slider {
+    padding: 0;
+}
+
+.slider-2 img {
+    height: -moz-available;
+    height: -webkit-fill-available;
+    display: flex;
+}
+
+.slider-2-wrap {
+    height: 232px;
+    width: 232px;
+    overflow: hidden;
+}
+
+
+@media (max-width: 1024px) {
+
+    .container {
+        width: 512px;
+    }
+
+    header {
+        padding: 10px 20px;
+    }
+
+    .row {
+        height: 512px;
+    }
+
+    .box-2-1 {
+        flex: 1 0 100%;
+        height: 256px;
+    }
+
+    .box-1-1 {
+        flex: 1 0 50%;
+        height: 256px;
+    }
+
+    .slider-1 {
+        height: 1215px;
+    }
+
+    .slider-1 img {
+        height: 1215px;
+    }
+
+    .slider-1-wrap {
+        margin-left: 100px;
+    }
+
+    .slider-2-wrap {
+        width: 256px;
+        height: 256px;
+    }
+
+}
+
+@media (max-width: 550px) {
+    .container {
+        width: 100%;
+    }
+
+    .row {
+        height: 100vw;
+    }
+
+    .box-2-1 {
+        flex: 1 0 100%;
+        height: 50%;
+    }
+
+    .box-1-1 {
+        flex: 1 0 50%;
+        height: 50%;
+    }
+
+    .slider-1 {
+        height: 1215px;
+    }
+
+    .slider-1 img {
+        height: 1215px;
+    }
+
+    .slider-1-wrap {
+        margin-left: 100px;
+    }
+
+    .slider-2-wrap {
+        width: 50vw;
+        height: 50vw;
+    }
 }
 
 /* form starting stylings ------------------------------- */
@@ -403,40 +497,3 @@ footer {
       from { background:#5264AE; }
     to 	{ width:0; background:transparent; }
   }
-
-
-
-.slider-1 {
-    display: flex;
-    align-items: stretch;
-    height: 654px;
-}
-
-.slider-1 img {
-    height: auto;
-    display: flex;
-}
-
-.slider-1-wrap {
-    position: absolute;
-    top: 0px;
-    z-index: -1;
-    overflow: hidden;
-    margin-left: 300px;
-}
-
-.slider {
-    padding: 0;
-}
-
-.slider-2 img {
-    height: -moz-available;
-    height: -webkit-fill-available;
-    display: flex;
-}
-
-.slider-2-wrap {
-    height: 232px;
-    width: 232px;
-    overflow: hidden;
-}
